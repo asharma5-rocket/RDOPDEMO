@@ -1,0 +1,12 @@
+     A* logical over MANYPF
+     A*
+     A          R MANYREC                   PFILE(MANYPF)
+     A          K MNFLD9
+     A          K MNFLD8
+     A          K MNFLD7
+     A          K MNFLD6
+     A          K MNFLD5
+     A          K MNFLD4
+     A          K MNFLD3
+     A          K MNFLD2
+     A          K MNFLD1

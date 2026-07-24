@@ -1,0 +1,8 @@
+CREATE ALIAS &LIB/BSTABL0A
+              FOR BSTABL0;
+
+COMMENT ON ALIAS BSTABL0A
+  IS 'XXXXX COMMENT Alias-' ;
+
+LABEL ON ALIAS BSTABL0A
+  IS 'XXXXX LABEL ON Alias----------------------------50' ;

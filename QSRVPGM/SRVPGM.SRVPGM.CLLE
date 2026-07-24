@@ -1,0 +1,3 @@
+             CRTSRVPGM  SRVPGM(&LIB/SRVPGM) MODULE(*LIBL/MODULE) +
+                          EXPORT(*ALL) TEXT('I am a SRVPGM!') +
+                          ALWUPD(*YES) ALWLIBUPD(*YES)

@@ -1,0 +1,4 @@
+             DCL        VAR(&X)       TYPE(*DEC) LEN(1 0)
+             DCL        VAR(&Y)       TYPE(*DEC) LEN(1 0)
+             CHGVAR     VAR(&X) VALUE(0)
+             CHGVAR     VAR(&Y) VALUE(&Y / &X)

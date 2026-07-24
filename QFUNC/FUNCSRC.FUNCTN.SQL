@@ -1,0 +1,10 @@
+-- Sourced function
+--   LMi will also create FUNCSRC *SRVPGM CLE
+
+CREATE FUNCTION &LIB/FUNCSRC (INTEGER)
+     SPECIFIC FUNCSRC
+     RETURNS FLOAT
+     SOURCE QSYS2/AVG (INTEGER);
+
+comment on SPECIFIC FUNCTION FUNCSRC
+is 'FUNCSRC Source Function'
