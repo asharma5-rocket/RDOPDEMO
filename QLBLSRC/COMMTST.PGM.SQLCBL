@@ -1,0 +1,28 @@
+       IDENTIFICATION DIVISION.
+      * CHANGED SOURCE 10/15/03 8:10 AM
+      * FARMED FROM GARYM 01/28/10
+      * ADD TO LMI AS TYPE *PGM, ATTR SQLCBL
+      *     CREATES A *PGM CBL
+       PROGRAM-ID.  COMMTST.
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
+       01  WORK-DATE-TIME.
+           05  WORK-DATE-TIME-STAMP     PIC  X(26).
+           EXEC SQL
+             INCLUDE SQLCA
+           END-EXEC.
+       LINKAGE SECTION.
+       01  PARM1               PIC      X(10).
+       PROCEDURE DIVISION USING PARM1.
+       PARA-1.
+           MOVE SPACES TO PARM1.
+           EXEC SQL
+             SELECT CURRNT TIMESTAMP
+             INTO :WORK-DATE-TIME-STAMP
+             FROM ONEROWTBL
+           END-EXEC.
+           STOP RUN.

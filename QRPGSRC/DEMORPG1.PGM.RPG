@@ -1,0 +1,48 @@
+     H*
+     H*** TGS 7/12/07: COPIED FROM ANLZSRC IN ANALYZER.
+     H********************************************************************
+     H** PROGRAM NAME: DEMORPG1                                          *
+     H**                                                                 *
+     H********************************************************************
+     H*
+     F*
+     FQSYSPRT O   F     132     OA     PRINTER                            TL110
+     F*
+     E                    DSPMSG  2   4 30
+     I*
+     I            DS
+     I                                        1   20CNT
+     I                                       18  190WRKCNT
+     I*
+     C                     MOVE DSPMSG,1  OUTMSG 30
+     C                     EXCPTMSGS
+     C                     DO   10        CNT
+     C                     EXSR CHKCNT
+     C                     END
+     C                     SETON                     LR
+     C                     RETRN
+     C*
+     C           CHKCNT    BEGSR
+     C           CNT       DIV  2         WRKCNT
+     C                     MULT 2         WRKCNT
+     C           CNT       IFEQ WRKCNT
+     C           CNT       IFEQ 0
+     C                     MOVE DSPMSG,2  OUTMSG 30
+     C                     EXCPTMSGS
+     C                     ELSE
+     C                     MOVE DSPMSG,3  OUTMSG 30
+     C                     EXCPTMSGS
+     C                     END
+     C                     END
+     C   LR                MOVE DSPMSG,4  OUTMSG 30
+     C   LR                EXCPTMSGS
+     C                     ENDSR
+     O*
+     OQSYSPRT E  1             MSGS
+     O                         OUTMSG    31                               TL140
+     OQSYSPRT E  1     OA      MSGS
+     O                                   16 '               '             TL140
+     O                                   16 '               '             TL140
+**  DSPMSG
+BEGINNING SAMPLE EXECUTION    COUNT IS ZERO
+COUNT IS EVEN                 LR IS ON

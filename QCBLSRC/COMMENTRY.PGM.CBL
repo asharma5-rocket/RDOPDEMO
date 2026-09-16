@@ -1,0 +1,10 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID.  COMMENTRY.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  PARM1               PIC      X(10).
+       PROCEDURE DIVISION.
+       PARA-1.
+           CALL "COMMIO" USING PARM1.
+           STOP RUN.
